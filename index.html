@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090909" />
+  <meta name="description" content="BG-AI — inteligência artificial da BG SCRIPTS." />
+  <title>BG-AI | BG SCRIPTS</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">BG</span><div><b>BG-AI</b><small>BG SCRIPTS</small></div></div>
+      <button id="new-chat" class="new-chat">＋ Nova conversa</button>
+      <div class="side-label">RECENTES</div>
+      <div id="history" class="history"></div>
+      <div class="sidebar-bottom"><span class="status-dot"></span> Modelo executado neste dispositivo</div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button id="menu-toggle" class="icon-btn" aria-label="Abrir menu">☰</button>
+        <div class="mobile-brand"><span class="brand-mark">BG</span><b>BG-AI</b></div>
+        <span class="model-tag">Qwen2.5 · 0.5B</span>
+      </header>
+
+      <section id="welcome" class="welcome">
+        <div class="welcome-mark">BG</div>
+        <p class="eyebrow">BG SCRIPTS APRESENTA</p>
+        <h1>Como posso ajudar<br/><em>você hoje?</em></h1>
+        <p class="welcome-copy">Converse, explore ideias e tire suas dúvidas com a BG-AI.</p>
+        <div class="suggestions">
+          <button class="suggestion" data-prompt="Explique inteligência artificial de forma simples.">✦ <span>Explique um assunto</span></button>
+          <button class="suggestion" data-prompt="Me ajude a criar um projeto em HTML, CSS e JavaScript.">⌘ <span>Ajude com programação</span></button>
+          <button class="suggestion" data-prompt="Crie um plano de estudos organizado para mim.">▤ <span>Organize meus estudos</span></button>
+        </div>
+      </section>
+
+      <section id="messages" class="messages" aria-live="polite"></section>
+
+      <div class="composer-wrap">
+        <div id="load-status" class="load-status">O modelo será baixado do Hugging Face na primeira utilização.</div>
+        <form id="chat-form" class="composer">
+          <textarea id="prompt" rows="1" placeholder="Envie uma mensagem para BG-AI..." aria-label="Mensagem"></textarea>
+          <button id="send" type="submit" aria-label="Enviar mensagem">↑</button>
+        </form>
+        <p class="disclaimer">A BG-AI pode cometer erros. Confira informações importantes.</p>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
